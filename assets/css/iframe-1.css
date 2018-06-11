@@ -1,0 +1,15 @@
+iframe {
+  width:100%;
+  height:338px;
+  border:none;
+  overflow:hidden;
+}
+
+.clean-block .block-heading {
+  height:100px;
+}
+
+iframe {
+  min-height:180vh;
+}
+
