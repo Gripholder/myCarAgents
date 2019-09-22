@@ -25,3 +25,8 @@
 .aboutText {
   max-width: 100% !important;
 }
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+}
