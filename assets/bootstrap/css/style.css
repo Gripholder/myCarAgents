@@ -1,0 +1,27 @@
+.infoHeader, .aboutHeaderm, .featureHeader {
+  text-align: center;
+}
+
+.infoText, .aboutText {
+  font-size: 1.4rem;
+  margin-bottom: 5%;
+  line-height: 2.7rem;
+  text-align: center;
+}
+
+.text-info {
+  font-size: 3rem;
+}
+
+.col-md-12 button {
+  display: block;
+  margin: auto;
+}
+
+.featureHeader {
+  margin-bottom: 5% !important;
+}
+
+.aboutText {
+  max-width: 100% !important;
+}
