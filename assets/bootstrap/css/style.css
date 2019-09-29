@@ -30,3 +30,22 @@
   position: absolute;
   bottom: 0;
 }
+
+.container {
+  max-width: 90% !important;
+}
+
+.img-fluid {
+  max-width: 15rem;
+}
+
+navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-fluid {
+    max-width: 10rem;
+  }
+}
