@@ -39,7 +39,7 @@
   max-width: 15rem;
 }
 
-navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar {
+#navbar {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }

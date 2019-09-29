@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" id="navbar">
         <div class="container"><a class="navbar-brand logo" href="/"><img class="img-fluid" src="assets/img/LlvHv6S - Imgur.jpg" style="/*background-image:url(&quot;assets/img/LlvHv6S - Imgur.jpg&quot;);*//*background-position:center;*/"></a><button class="navbar-toggler" data-toggle="collapse"
                 data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -32,9 +32,9 @@
         <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/asphalt-auto-automobile-164634.jpg&quot;);color:rgba(76,79,81,0.4);">
             <div class="text">
                 <h1>My Car Agents</h1>
-                <p>The ultimate car buying service. Get an expert to do the work for you</p><button class="btn btn-outline-light btn-lg" type="button">Learn More</button></div>
+                <p>The ultimate car buying service. Get an expert to do the work for you</p><button class="btn btn-outline-light btn-lg" type="button" onClick="scrollToView('#info-section');">Learn More</button></div>
         </section>
-        <section class="clean-block clean-info dark">
+        <section class="clean-block clean-info dark" id="info-section">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Info</h2>
@@ -43,7 +43,7 @@
                     <div class="col-md-12">
                         <div class="getting-started-info infoText">
                             <p>Unlike most 3rd party source we do not ask you for a penny to use our service. We know dealerships spend thousands dollars each month to 3rd party sources to draw customers into your dealership. Since we are a free service to you, All we ask is for a better deal to our clients. Clients that may be in your area that will use your part's dept and service. All we need is for you to honor your price if we decide to go with your dealership. If you provide us with the best deal, we will give our clients a certificate with all the details so they can come in and purchase a vehicle quick and easy.</p>
-                        </div><button class="btn btn-outline-primary btn-lg" type="button">Join Now</button></div>
+                        </div><a href="contact-us.html"><button class="btn btn-outline-primary btn-lg" type="button">Join Now</button></a></div>
                 </div>
             </div>
         </section>
@@ -133,6 +133,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
