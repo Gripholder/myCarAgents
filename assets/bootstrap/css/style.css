@@ -1,3 +1,11 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
 .infoHeader, .aboutHeaderm, .featureHeader {
   text-align: center;
 }
@@ -45,8 +53,59 @@
   padding-bottom: 0 !important;
 }
 
+#navbar .container {
+  padding-left: 30px;
+}
+
+.img-fluid {
+  height: 5rem;
+  max-width: 12rem;
+}
+
+.block-heading {
+  margin-bottom: 0 !important;
+}
+
+#about-us {
+  padding-bottom: 50px;
+}
+
+.contact-us-page section {
+  padding-bottom: 0;
+}
+
+#landing-page {
+  background-image: url(../../img/five-assorted-color-cars-parked-inside-room-1231643.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgba(76,79,81,0.6);
+}
+
+.carousel-item {
+  border: 5px;
+  margin-right: 20px;
+  max-width:calc(100% - 20px); //one third minus the 20px margin
+  box-sizing:border-box;
+}
+
+/* @media (min-width:1195px) {
+  .container {
+    max-width: 960px
+  }
+}
+@media (min-width:1195px) {
+  .col-lg {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%
+  } */
+
 @media only screen and (max-width: 600px) {
   .img-fluid {
     max-width: 10rem;
+    height: auto;
   }
 }
