@@ -1,3 +1,11 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
 .infoHeader, .aboutHeaderm, .featureHeader {
   text-align: center;
 }
@@ -45,8 +53,30 @@
   padding-bottom: 0 !important;
 }
 
+#navbar .container {
+  padding-left: 30px;
+}
+
+.img-fluid {
+  height: 5rem;
+  max-width: 12rem;
+}
+
+.block-heading {
+  margin-bottom: 0 !important;
+}
+
+#about-us {
+  padding-bottom: 50px;
+}
+
+.contact-us-page section {
+  padding-bottom: 0;
+}
+
 @media only screen and (max-width: 600px) {
   .img-fluid {
     max-width: 10rem;
+    height: auto;
   }
 }
