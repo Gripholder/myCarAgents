@@ -14,19 +14,21 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" id="navbar">
-        <div class="container"><a class="navbar-brand logo" href="index.html"><img class="img-fluid" src="assets/img/LlvHv6S - Imgur.jpg"></a><button class="navbar-toggler" data-toggle="collapse"
+        <div class="container"><a class="navbar-brand logo" href="/"><img class="img-fluid" src="assets/img/LlvHv6S - Imgur.jpg"></a><button class="navbar-toggler" data-toggle="collapse"
                 data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">ABOUT</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">WHAT WE DO</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">CONTACT</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" onClick="scrollToView('#introduction');">Introduction</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" onClick="scrollToView('#process');">Process</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" onClick="scrollToView('#dealership');">Dealership</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" onClick="scrollToView('#about-us');">About us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="page pricing-table-page">
-        <section class="clean-block clean-pricing dark">
+    <main class="page pricing-table-page" style="height: 100%;">
+        <section class="clean-block clean-pricing dark" style="height: 100%;">
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Price</h2>
@@ -40,15 +42,18 @@
                             </div>
                             <div class="features"></div>
                             <div class="price">
-                                <h4>$69</h4>
+                                <h4>$89</h4>
                                 <p>Satisfaction guaranteed 100%</p>
-                            </div><button class="btn btn-primary btn-block" type="button">BUY NOW</button></div>
+                            </div>
+                            <!-- <button class="btn btn-primary btn-block" type="button">BUY NOW</button> -->
+                            <div id="paypal-button-container"></div>
+                          </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="page-footer dark" style="">
+    <!-- <footer class="page-footer dark" style="">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
@@ -76,7 +81,33 @@
         <div class="footer-copyright">
             <p>© 2018 Copyright</p>
         </div>
-    </footer>
+    </footer> -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      paypal.Buttons({
+          style: {
+              shape: 'rect',
+              color: 'gold',
+              layout: 'vertical',
+              label: 'pay',
+
+          },
+          createOrder: function(data, actions) {
+              return actions.order.create({
+                  purchase_units: [{
+                      amount: {
+                          value: '89'
+                      }
+                  }]
+              });
+          },
+          onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+                  alert('Transaction completed by ' + details.payer.name.given_name + '!');
+              });
+          }
+      }).render('#paypal-button-container');
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
