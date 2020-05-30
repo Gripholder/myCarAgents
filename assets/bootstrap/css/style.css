@@ -75,7 +75,7 @@ body {
 }
 
 #landing-page {
-  background-image: url(../../img/five-assorted-color-cars-parked-inside-room-1231643.jpg);
+  background-image: url("../../img/asphalt-auto-automobile-164634.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -87,6 +87,13 @@ body {
   margin-right: 20px;
   max-width:calc(100% - 20px); //one third minus the 20px margin
   box-sizing:border-box;
+}
+
+.dealership-list {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  margin: 20px;
 }
 
 /* @media (min-width:1195px) {
